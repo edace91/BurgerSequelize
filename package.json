@@ -1,0 +1,20 @@
+{
+  "name": "burgersequelize",
+  "version": "1.0.0",
+  "description": "using sequelize on the burger app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edace91/BurgerSequelize.git"
+  },
+  "author": "Eduardo Aceves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edace91/BurgerSequelize/issues"
+  },
+  "homepage": "https://github.com/edace91/BurgerSequelize#readme"
+}
