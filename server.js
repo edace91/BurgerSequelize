@@ -4,8 +4,11 @@ express middleware.
 */
 var models = require('./models');
 var express = require('express');
+var exphbs = require('express-handlebars');
+var mysql = require('mysql');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+
 
 var app = express();
 
@@ -24,7 +27,8 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 
 var routes = require('./controllers/burgers_controller.js');
-app.use('/', routes);
+app.get('/', function(req, res) {res.redirect('/burgers')})
+app.use('/burgers', routes);
 
 models.sequelize.sync();
 
