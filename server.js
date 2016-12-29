@@ -2,7 +2,7 @@
 Here is where you set up your server file.
 express middleware.
 */
-
+var models = require('./models');
 var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
@@ -28,6 +28,6 @@ app.use('/', routes);
 
 models.sequelize.sync();
 
-var port = 8080;
+var PORT = 8080;
 app.listen(process.env.PORT || PORT);
 console.log("local host:" + PORT);
