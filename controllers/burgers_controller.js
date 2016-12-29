@@ -6,7 +6,7 @@ var express = require('express');
 var router = express.Router();
 var models = require('../models');
 
-router.get('/burgers', function(req, res) {
+router.get('/', function(req, res) {
 	models.Burgers.findAll({
 
 	})
@@ -19,7 +19,7 @@ router.get('/burgers', function(req, res) {
 
 
 
-router.post('/burgers/create', function(req, res) {
+router.post('/create', function(req, res) {
 	models.Burgers.create({
 		burger_name: req.body.name
 	})
@@ -30,7 +30,7 @@ router.post('/burgers/create', function(req, res) {
 
 
 
-router.put('/burgers/update/:id', function(req, res) {
+router.put('/update/:id', function(req, res) {
 	models.Burgers.update(
 		{devoured: req.body.devoured},
 		{where: {id: req.params.id}
